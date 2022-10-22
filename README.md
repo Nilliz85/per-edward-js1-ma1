@@ -1,2 +1,1 @@
-# per-edward-js1-ma1
-javascript first week
+# Files for JavaScript 1 Module Asssignment 1
