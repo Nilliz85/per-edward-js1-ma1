@@ -93,15 +93,14 @@ Assign the return value of the function to the innerHTML property of the element
 // your answer for question 8 goes here
 const catContainer = document.querySelector(".cat-container");
 
-function createCats(cats) {
-  const htmlArray = [];
-  cats.forEach((cat) => {
-    if (cat.age) {
-      const HTML = `<div><h5>${cat.name}</h5><p>${cat.age}</p></div>`;
-      htmlArray.push(HTML);
-    }
-  });
-  return htmlArray;
+function createCats(cat) {
+  if (cat.age) {
+    return `<div><h5>${cat.name}</h5><p>${cat.age}</p></div>`;
+  } else {
+    return `<div><h5>${cat.name}</h5><p>Unknown age</p></div>`;
+  }
 }
 
-catContainer.innerHTML = createCats(cats);
+cats.forEach((cat) => {
+  catContainer.innerHTML += createCats(cat);
+});
